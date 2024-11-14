@@ -22,7 +22,6 @@
 }
 
 .dropdown-menu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -430,14 +429,16 @@ body.loaded #preloader {
         font-size: 16px !important;
     }
 
-    .dropdown-menu {
-        position: static;
+    .nav-item.dropdown .dropdown-menu {
         display: none;
-        background-color: #444;
+        opacity: 0;
+        transition: opacity 0.3s ease;
     }
 
-    .dropdown.active .dropdown-menu {
+    /* Show the dropdown menu when the parent has the 'active' class */
+    .nav-item.dropdown.active .dropdown-menu {
         display: block;
+        opacity: 1;
     }
 }
 
