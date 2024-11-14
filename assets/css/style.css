@@ -20,9 +20,7 @@
 .gradiant-color {
     background: linear-gradient(to bottom right, #95D8EB 11.95%, #0076BE 100%);
     -webkit-background-clip: text;
-    /* Apply background to the text */
     background-clip: text;
-    /* Ensure the gradient is clipped to the text */
     color: transparent;
 }
 
@@ -52,41 +50,6 @@
     color: black !important;
 }
 
-/* .timeline {
-    width: 80%;
-    height: auto;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.timeline-content {
-    position: relative;
-    padding: 20px;
-    background: #1f1f1f;
-    border-radius: 5px;
-    color: white;
-    padding: 1.75rem;
-    transition: 0.4s ease;
-    overflow-wrap: break-word !important;
-    margin: 1rem;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    z-index: 2;
-    transition: all 500ms linear;
-}
-
-.timeline-content:hover {
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2), 0 8px 24px rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px);
-}
-
-.timeline-component {
-    margin: 0px 20px 20px 20px;
-} */
-
-/* Base styles for the timeline */
 .timeline {
     width: 90%;
     max-width: 800px;
@@ -96,88 +59,41 @@
     position: relative;
 }
 
-/* Timeline middle line for small screens */
 .timeline-middle {
     position: absolute;
     left: -18px;
-    /* Align the line to the left */
     top: 0;
     width: 3px;
     height: 100%;
     background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
 }
 
-/* Circle positioning for each timeline item */
 .timeline-circle {
     position: absolute;
     left: 12px;
-    /* Align circles with the line */
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
 }
 
-/* Position each circle correctly by placing it within each content box */
 .timeline-component {
     position: relative;
     margin: 20px 0 20px 40px;
-    /* Space content from the line */
     padding-left: 1.5rem;
-    /* Extra padding for readability */
 }
 
-/* Add circles in correct position for each component */
 .timeline-component::before {
     content: "";
     position: absolute;
     left: -40px;
-    /* Position the circle on the line */
     top: -4px;
-    /* Adjust top based on spacing preference */
     width: 15px;
     height: 15px;
     border-radius: 50%;
     background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
 }
 
-/* Larger screens layout using grid */
-@media screen and (min-width: 768px) {
-    .timeline {
-        display: grid;
-        grid-template-columns: 1fr 3px 1fr;
-    }
-
-    .timeline-middle {
-        position: relative;
-        left: auto;
-        background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
-        width: 3px;
-        height: 100%;
-    }
-
-    .timeline-circle {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
-    }
-
-    .timeline-component {
-        margin: 0px 20px 20px 20px;
-        padding-left: 0;
-    }
-
-    .timeline-component::before {
-        display: none;
-    }
-}
-
-/* Timeline content styles */
 .timeline-content {
     position: relative;
     padding: 20px;
@@ -269,29 +185,22 @@
 .animation-pulse {
     transition: all 0.3s ease-in-out;
     animation: pulse 2s infinite;
-    /* Apply the pulse animation */
 }
 
 @keyframes pulse {
     0% {
         transform: scale(0.8);
-        /* Initial size */
         opacity: 1;
-        /* Fully visible */
     }
 
     50% {
         transform: scale(1.2);
-        /* Scale up to 110% */
         opacity: 0.8;
-        /* Slightly fade out */
     }
 
     100% {
         transform: scale(0.8);
-        /* Return to original size */
         opacity: 1;
-        /* Fully visible again */
     }
 }
 
@@ -360,6 +269,8 @@ body.loaded #preloader {
     width: 100%;
     border-radius: 50%;
 }
+ 
+/* CLASSES TO BE APPEND BY JAVASCRIPT */
 
 .show {
     right: 0 !important;
@@ -379,7 +290,7 @@ body.loaded #preloader {
     display: none !important;
 }
 
-/* 
+
 @media screen and (min-width: 768px) {
     .timeline {
         display: grid;
@@ -388,27 +299,32 @@ body.loaded #preloader {
 
     .timeline-middle {
         position: relative;
+        left: auto;
         background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
         width: 3px;
         height: 100%;
-    }
-
-    .main-middle {
-        opacity: 0;
     }
 
     .timeline-circle {
         position: absolute;
         top: 0;
         left: 50%;
+        transform: translateX(-50%);
         width: 15px;
         height: 15px;
         border-radius: 50%;
         background-image: linear-gradient(45deg, #95D8EB, #0076BE, #09324b);
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
     }
-} */
+
+    .timeline-component {
+        margin: 0px 20px 20px 20px;
+        padding-left: 0;
+    }
+
+    .timeline-component::before {
+        display: none;
+    }
+}
 
 @media screen and (max-width:992px) {
     .header-bg-img {
@@ -452,7 +368,7 @@ body.loaded #preloader {
     }
 
     .timeline-middle {
-        top: 61px;
+        top: 51px;
     }
 
     .fs-36px {
