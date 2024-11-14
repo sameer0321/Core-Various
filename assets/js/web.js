@@ -27,6 +27,7 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
+
 let mobileView = document.querySelector(".mobileview");
 let menuBtn = document.querySelector(".menu");
 let body = document.querySelector("body");
@@ -57,10 +58,20 @@ navlinks.forEach(link => {
 });
 
 // Toggle dropdowns in mobile view
-document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
-    dropdown.addEventListener("click", function (e) {
-        e.stopPropagation();
-        dropdown.classList.toggle("active");
+document.querySelectorAll('.nav-item.dropdown > a').forEach(dropdownLink => {
+    dropdownLink.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent default link behavior
+        const parentDropdown = this.parentElement;
+
+        // Toggle active class on the clicked dropdown
+        parentDropdown.classList.toggle("active");
+
+        // Close other open dropdowns
+        document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
+            if (dropdown !== parentDropdown) {
+                dropdown.classList.remove("active");
+            }
+        });
     });
 });
 
