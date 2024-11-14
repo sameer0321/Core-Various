@@ -20,13 +20,35 @@
                 <div class="d-flex justify-content-between align-items-center w-100">
                     <h1 class="text-white m-0">logo</h1>
                     <ul class="m-0 p-0 d-flex align-items-center gap-4 mobileview">
-                        <li><a class="navlinks text-white" href="#">About Us</a></li>
-                        <li><a class="navlinks text-white" href="#">Investments</a></li>
-                        <li><a class="navlinks text-white" href="#">Contest</a></li>
-                        <li><a class="navlinks text-white" href="#">Make Deposit</a></li>
-                        <li><a class="navlinks text-white" href="#">Wallet Statistic</a></li>
+                        <li class="nav-item">
+                            <a class="navlinks text-white" href="#">About Us</a>
+                        </li>
+                        <!-- <li><a class="navlinks text-white" href="#">Investments</a></li> -->
+                        <li class="nav-item dropdown">
+                            <a style="font-size: 18px;" class="text-white" href="#">Investments <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-link" href="#">Stocks</a></li>
+                                <li><a class="dropdown-link" href="#">Real Estate</a></li>
+                                <li><a class="dropdown-link" href="#">Crypto</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlinks text-white" href="#">Contest</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlinks text-white" href="#">Make Deposit</a>
+                        </li>
+                        <!-- <li><a class="navlinks text-white" href="#">Wallet Statistic</a></li>000 -->
+                        <li class="nav-item dropdown">
+                            <a style="font-size: 18px;" class="text-white" href="#">Wallet Statistic <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-link" href="#">Monthly Report</a></li>
+                                <li><a class="dropdown-link" href="#">Yearly Report</a></li>
+                                <li><a class="dropdown-link" href="#">Transaction History</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                    <label style="margin-top: 3px;" class="menu d-md-none">
+                    <label style="margin-top: 3px;" class="menu d_none">
                         <span class="arrow_1"></span>
                         <span class="arrow_2"></span>
                         <span class="arrow_3"></span>
@@ -116,7 +138,8 @@
             </h2>
             <p class="fs-16px" style="color: white; text-align: center; font-size: 20px; font-weight: 600;">SIMPLE
                 <span>3 STEPS</span>
-                TO GET EARNINGS</p>
+                TO GET EARNINGS
+            </p>
             <div class="timeline  py-4 py-md-5">
                 <div class="timeline-empty">
                 </div>
