@@ -52,11 +52,7 @@
     transition: transform 0.3s ease;
 }
 
-/* Rotate arrow on hover */
-.nav-item:hover .dropdown-arrow,
-.dropdown.active .dropdown-arrow {
-    transform: rotate(180deg);
-}
+
 
 .gradiant-color {
     background: linear-gradient(to bottom right, #95D8EB 11.95%, #0076BE 100%);
@@ -368,6 +364,11 @@ body.loaded #preloader {
     .d_none {
         display: none;
     }
+
+    /* Rotate arrow on hover */
+    .nav-item:hover .dropdown-arrow {
+        transform: rotate(180deg);
+    }
 }
 
 @media screen and (max-width:992px) {
@@ -439,6 +440,18 @@ body.loaded #preloader {
     .nav-item.dropdown.active .dropdown-menu {
         display: block;
         opacity: 1;
+    }
+
+    /* Initial arrow state */
+    .nav-item.dropdown>a .dropdown-arrow {
+        transition: transform 0.3s ease;
+        /* Add transition for smooth rotation */
+    }
+
+    /* Arrow rotation when dropdown is active */
+    .nav-item.dropdown.active>a .dropdown-arrow {
+        transform: rotate(180deg);
+        /* Rotate the arrow by 180 degrees */
     }
 }
 
