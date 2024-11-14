@@ -62,7 +62,7 @@ document.querySelectorAll('.nav-item.dropdown > a').forEach(dropdownLink => {
     dropdownLink.addEventListener("click", function (e) {
         e.preventDefault(); // Prevent default link behavior
         const parentDropdown = this.parentElement;
-
+        
         // Toggle active class on the clicked dropdown
         parentDropdown.classList.toggle("active");
 
