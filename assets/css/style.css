@@ -429,6 +429,16 @@ body.loaded #preloader {
     .fs-16px {
         font-size: 16px !important;
     }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: #444;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
 }
 
 @media screen and (max-width:576px) {
